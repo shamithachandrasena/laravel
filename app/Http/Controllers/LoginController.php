@@ -16,7 +16,7 @@ class LoginController extends Controller
        $user_name=$inputs['uname'];
        $password=$inputs['psw'];
        //$user=new User();
-       if(Auth::attempt(['user_name' => $user_name, 'password' => $password])){
+       if(Auth::attempt(['userame' => $user_name, 'password' => $password])){
         //return redirect()->intended('home');
         //dd("success");
         //home();

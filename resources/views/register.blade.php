@@ -77,7 +77,7 @@ span.psw {
 <div class="new">
 <form method='post' action="{{url('register_post')}}">
   <div class="imgcontainer">
-    <img src="../resources/assets/img/img.png" alt="Avatar" class="avatar">
+    <img src="../../resources/assets/img/img.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">

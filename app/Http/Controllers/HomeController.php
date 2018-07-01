@@ -21,7 +21,7 @@ class HomeController extends Controller
        $user=new User();
        $user->first_name=$first_name;
        $user->last_name=$last_name;
-       $user->user_name=$user_name;
+       $user->userame=$user_name;
        $user->password=bcrypt($password);
        $result=$user->save();
     //    dd($first_name,$last_name,$user_name,$password);

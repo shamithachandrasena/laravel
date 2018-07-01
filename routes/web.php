@@ -19,9 +19,26 @@ Route::get('/', function () {
 //     return view('register');
 // });
 
+// Route::get('/register', 'HomeController@register');
+// Route::get('/home', 'HomeController@home');
+// Route::post('/register_post', 'HomeController@register_post');
+
+// Route::get('/login', 'LoginController@login');
+// Route::post('/login_post', 'LoginController@login_post');
+
+// Register Routes
 Route::get('/register', 'HomeController@register');
-Route::get('/home', 'HomeController@home');
 Route::post('/register_post', 'HomeController@register_post');
 
+// Login Routes
 Route::get('/login', 'LoginController@login');
 Route::post('/login_post', 'LoginController@login_post');
+
+Route::group(['middleware'=> ['myAuth']],function(){
+// Home Route
+Route::get('/home', 'HomeController@home');
+
+// Update User
+Route::get('/user_update/{id}', 'UserController@user_update');
+Route::post('/user_update_post/{id}', 'UserController@user_update_post');
+});
